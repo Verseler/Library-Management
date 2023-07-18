@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="form-wrapper" class="form-wrapper">
+        <form id="form" onsubmit="addBookToLibrary()">
+            <h1>Add new Book</h1>
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="pages" placeholder="Pages" required>
+            <div class="checkbox-wrapper">
+                <label for="isRead">Have you read it?</label>
+                <input type="checkbox" id="isRead">
+            </div>
+            <input class="main-btn" type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <section class="main-content">
+        <nav>
+            <h1>Library</h1>
+            <button>Log in</button>
+        </nav>
+
+        <section id="book-container">
+            <button class="add-btn" onclick="showMenu()">+ Add book</button>
+            <section id="book-grid">
+                
+            </section>
+        </section>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width:  100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-wrapper {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #11111196;
+    position: absolute;
+    z-index: 3;
+}
+
+#form {
+    z-index: 5;
+    width: 300px;
+    font-size: 1rem;
+    padding: 1.2em 1em;
+    border-radius: 0.6em;
+    background-color: rgb(247, 247, 247);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#form h1 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#form input {
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8em 1em;
+    border-radius: 0.6em;
+    margin-top: 1.2em;
+}
+#form input::placeholder {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#form .checkbox-wrapper {
+    font-size: 1.2rem;
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form #isRead {
+    margin-top: 0;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+.main-content {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    font-size: 2rem;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#book-container {
+    min-height: calc(100% - 90px);
+    max-height: auto;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    padding: 150px 100px 0;
+    position: relative;
+}
+
+#book-container .book {
+    height: 300px;
+    font-size: 1.2rem;
+    border-radius: 0.4em;
+    font-weight: 500;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#book-container .book div, 
+#book-container .book button {
+    margin-top: 20px;
+}
+
+#book-container .book button {
+    font-size: 1.2rem;
+    padding: 0.6em;
+    border-radius: 0.3em;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+}
+
+#book-grid {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.main-btn {
+    color: #111;
+    background-color: rgb(146, 255, 155) !important; 
+    cursor: pointer !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+}
+
+.not-read-btn {
+    color: #111;
+    background-color: rgb(255, 146, 146) !important; 
+    cursor: pointer !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+}
+
+.add-btn {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0.5em 0.7em;
+    font-size: 1.5rem;
+    border-radius: 0.3em;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
